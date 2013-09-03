@@ -109,6 +109,6 @@ class msaFluidParticlesApp : public AppBasic {
 	int					mRenderHeight;
 	osc::Listener 		receiver;
 	Vec2i				mMousePos;
-
+	bool				mMouseDown;
 
 };

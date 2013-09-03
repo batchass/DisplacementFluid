@@ -76,7 +76,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\include;"$(CINDER_085)\include";$(CINDER_085)\blocks\OSC\src;"$(CINDER_085)\boost"</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;$(CINDER_085)\include;$(CINDER_085)\boost;$(CINDER_085)\blocks\OSC\src;$(CINDER_085)\blocks\msaFluid\src;$(CINDER_085)\blocks\msaFluid\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader />

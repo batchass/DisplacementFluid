@@ -81,11 +81,8 @@ void msaFluidParticlesApp::setup()
 	setFrameRate( 60.0f );
 	setWindowSize(width, height);
 
-
 	pMouse = getWindowCenter();
 	resizeFluid			= true;
-
-
 
 	gl::enableAlphaBlending();
 
@@ -116,6 +113,19 @@ void msaFluidParticlesApp::update()
 			Vec2f mouseVel = Vec2f( pos - pMouse ) / getWindowSize();
 			addToFluid( mouseNorm, mouseVel, true, true );
 			pMouse = pos;
+			if ( m.getArgAsInt32(2) == 1 )
+			{
+				mMouseDown = true;
+			}
+			else
+			{
+				mMouseDown = false;
+			}
+			if ( mMouseDown )
+			{
+				mArcball.mouseDown( pos );
+				mCurrentMouseDown = mInitialMouseDown = pos;
+			}
 		}
 		// check for mouse button message
 		else if(m.getAddress() == "/mouse/button"){
@@ -123,18 +133,22 @@ void msaFluidParticlesApp::update()
 			Vec2i pos = Vec2i( m.getArgAsInt32(0), m.getArgAsInt32(1));
 			mArcball.mouseDown( pos );
 			mCurrentMouseDown = mInitialMouseDown = pos;
+			if ( m.getArgAsInt32(2) == 1 )
+			{
+				mMouseDown = true;
+			}
+			else
+			{
+				mMouseDown = false;
+			}
 		}
 		else if(m.getAddress() == "/window/position"){
 			// window position
-			//ofSetWindowPosition(m.getArgAsInt32(0), m.getArgAsInt32(1));
-			//ofSetWindowPosition(1600, 0);
+			app::setWindowPos(m.getArgAsInt32(0), m.getArgAsInt32(1));
 		}		
 		else if(m.getAddress() == "/window/setfullscreen"){
 			// fullscreen
-
-			//ofToggleFullscreen();
-
-			//ofSetFullscreen(m.getArgAsInt32(0));
+			setFullScreen( ! isFullScreen() );
 		}		
 		else{
 			// unrecognized message
@@ -142,37 +156,6 @@ void msaFluidParticlesApp::update()
 
 		}
 
-		/*for (int i = 0; i < message.getNumArgs(); i++) {
-		console() << "-- Argument " << i << std::endl;
-		console() << "---- type: " << message.getArgTypeName(i) << std::endl;
-		if( message.getArgType(i) == osc::TYPE_INT32 ) {
-		try {
-		console() << "------ value: "<< message.getArgAsInt32(i) << std::endl;
-		}
-		catch (...) {
-		console() << "Exception reading argument as int32" << std::endl;
-		}
-		}
-		else if( message.getArgType(i) == osc::TYPE_FLOAT ) {
-		try {
-		console() << "------ value: " << message.getArgAsFloat(i) << std::endl;
-		}
-		catch (...) {
-		console() << "Exception reading argument as float" << std::endl;
-		}
-		}
-		else if( message.getArgType(i) == osc::TYPE_STRING) {
-		try {
-		console() << "------ value: " << message.getArgAsString(i).c_str() << std::endl;
-		}
-		catch (...) {
-		console() << "Exception reading argument as string" << std::endl;
-		}
-		}
-		}
-
-		if( message.getNumArgs() != 0 && message.getArgType( 0 ) == osc::TYPE_FLOAT )
-		positionX = message.getArgAsFloat(0);*/
 	}
 
 	if( resizeFluid ) {
@@ -188,8 +171,8 @@ void msaFluidParticlesApp::update()
 
 void msaFluidParticlesApp::draw()
 {
-	//gl::clear( mBackgroundColor );
-	gl::clear( ColorA(45,48,20));
+	gl::clear( mBackgroundColor );
+	//gl::clear( ColorA(45,48,20));
 	CameraPersp cam( getWindowWidth(), getWindowHeight(), 60.0f );
 	cam.setPerspective( 60, getWindowAspectRatio(), 1, 1500 );
 	cam.lookAt( Vec3f( 2.6f, 1.6f, -2.6f ), Vec3f::zero() );
