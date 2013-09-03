@@ -54,7 +54,6 @@ using namespace ci::app;
 class msaFluidParticlesApp : public AppBasic {
  public:
 	void	setup();
-	void	quitProgram();
 	void	fadeToColor( float r, float g, float b, float speed );
 	void	addToFluid( Vec2f pos, Vec2f vel, bool addColor, bool addForce );
 	void	keyDown( KeyEvent event );
@@ -99,6 +98,7 @@ class msaFluidParticlesApp : public AppBasic {
 
 	// Reymenta
 	void				reymentaSetup();
+	void				quitProgram();
 	ColorAf				mBackgroundColor;
 	ColorAf				mColor;
 	int					mDisplayCount;

@@ -56,9 +56,15 @@ void msaFluidParticlesApp::reymentaSetup()
 		// Extend the frame on the bottom of the client area.
 		hr = DwmExtendFrameIntoClientArea(hWnd,&margins);
 	}
+
+	setWindowPos( mMainDisplayWidth, 0 );
+	//setFullScreen( ! isFullScreen() );
 	receiver.setup( 10000 );
 }
-
+void msaFluidParticlesApp::quitProgram()
+{
+	quit();
+}
 void msaFluidParticlesApp::setup()
 {
 	//console() << "ciMSAFluid Demo | (c) 2009 Mehmet Akten | www.memo.tv" << std::endl;
@@ -156,7 +162,7 @@ void msaFluidParticlesApp::update()
 		}
 		else if(m.getAddress() == "/window/position"){
 			// window position
-			app::setWindowPos(m.getArgAsInt32(0), m.getArgAsInt32(1));
+			setWindowPos(m.getArgAsInt32(0), m.getArgAsInt32(1));
 		}
 		else if(m.getAddress() == "/window/setfullscreen"){
 			// fullscreen
@@ -187,7 +193,6 @@ void msaFluidParticlesApp::update()
 void msaFluidParticlesApp::draw()
 {
 	gl::clear( mBackgroundColor );
-	//gl::clear( ColorA(45,48,20));
 	CameraPersp cam( getWindowWidth(), getWindowHeight(), 60.0f );
 	cam.setPerspective( 60, getWindowAspectRatio(), 1, 1500 );
 	cam.lookAt( Vec3f( 2.6f, 1.6f, -2.6f ), Vec3f::zero() );
@@ -334,10 +339,7 @@ void msaFluidParticlesApp::fadeToColor( float r, float g, float b, float speed )
 	glColor4f( r, g, b, speed );
 	gl::drawSolidRect( getWindowBounds() );
 }
-void msaFluidParticlesApp::quitProgram()
-{
-	quit();
-}
+
 // add force and dye to fluid, and create particles
 void msaFluidParticlesApp::addToFluid( Vec2f pos, Vec2f vel, bool addColor, bool addForce )
 {
