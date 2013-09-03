@@ -142,13 +142,28 @@ void msaFluidParticlesApp::update()
 				mMouseDown = false;
 			}
 		}
+		else if(m.getAddress() == "/fluid/drawfluid"){
+			drawFluid = !drawFluid;
+		}
+		else if(m.getAddress() == "/fluid/drawfluidtex"){
+			drawFluidTex = !drawFluidTex;
+		}
+		else if(m.getAddress() == "/fluid/drawparticles"){
+			drawParticles = ! drawParticles;
+		}
+		else if(m.getAddress() == "/fluid/randomizecolor"){
+			fluidSolver.randomizeColor();
+		}
 		else if(m.getAddress() == "/window/position"){
 			// window position
 			app::setWindowPos(m.getArgAsInt32(0), m.getArgAsInt32(1));
-		}		
+		}
 		else if(m.getAddress() == "/window/setfullscreen"){
 			// fullscreen
 			setFullScreen( ! isFullScreen() );
+		}		
+		else if(m.getAddress() == "/quit"){
+			quitProgram();
 		}		
 		else{
 			// unrecognized message
@@ -319,7 +334,10 @@ void msaFluidParticlesApp::fadeToColor( float r, float g, float b, float speed )
 	glColor4f( r, g, b, speed );
 	gl::drawSolidRect( getWindowBounds() );
 }
-
+void msaFluidParticlesApp::quitProgram()
+{
+	quit();
+}
 // add force and dye to fluid, and create particles
 void msaFluidParticlesApp::addToFluid( Vec2f pos, Vec2f vel, bool addColor, bool addForce )
 {
