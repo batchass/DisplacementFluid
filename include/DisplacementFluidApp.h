@@ -44,6 +44,9 @@
 #include "ParticleSystem.h"
 
 #include "Resources.h"
+// hwnd
+#include "dwmapi.h"
+#include "OscListener.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -93,4 +96,19 @@ class msaFluidParticlesApp : public AppBasic {
 	float				height;
 
 	bool				drawFluidTex;
+
+	// Reymenta
+	void				reymentaSetup();
+	ColorAf				mBackgroundColor;
+	ColorAf				mColor;
+	int					mDisplayCount;
+	int					mMainDisplayWidth;
+	int					mRenderX;
+	int					mRenderY;
+	int					mRenderWidth;
+	int					mRenderHeight;
+	osc::Listener 		receiver;
+	Vec2i				mMousePos;
+
+
 };
