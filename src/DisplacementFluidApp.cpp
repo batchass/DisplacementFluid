@@ -166,7 +166,7 @@ void msaFluidParticlesApp::update()
 		}
 		else if(m.getAddress() == "/window/setfullscreen"){
 			// fullscreen
-			setFullScreen( ! isFullScreen() );
+			//setFullScreen( ! isFullScreen() );
 		}		
 		else if(m.getAddress() == "/quit"){
 			quitProgram();
