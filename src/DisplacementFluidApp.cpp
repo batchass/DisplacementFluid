@@ -33,7 +33,7 @@ void msaFluidParticlesApp::reymentaSetup()
 	//rWin->setBorderless();
 	//rWin->setAlwaysOnTop();
 
-	/*HWND hWnd = (HWND)rWin->getNative();
+	HWND hWnd = (HWND)rWin->getNative();
 
 	HRESULT hr = S_OK;
 	// Create and populate the Blur Behind structure
@@ -55,7 +55,7 @@ void msaFluidParticlesApp::reymentaSetup()
 
 		// Extend the frame on the bottom of the client area.
 		hr = DwmExtendFrameIntoClientArea(hWnd,&margins);
-	}*/
+	}
 
 	setWindowPos( mMainDisplayWidth, 0 );
 
@@ -84,7 +84,7 @@ void msaFluidParticlesApp::setup()
 	height				= 768;
 
 	setFrameRate( 60.0f );
-	setWindowSize(width, height);
+	//setWindowSize(width, height);
 
 	pMouse = getWindowCenter();
 	resizeFluid			= true;
