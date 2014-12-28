@@ -46,7 +46,7 @@
 #include "Resources.h"
 // hwnd
 #include "dwmapi.h"
-#include "OscListener.h"
+
 
 using namespace ci;
 using namespace ci::app;
@@ -107,7 +107,6 @@ class msaFluidParticlesApp : public AppBasic {
 	int					mRenderY;
 	int					mRenderWidth;
 	int					mRenderHeight;
-	osc::Listener 		receiver;
 	Vec2i				mMousePos;
 	bool				mMouseDown;
 

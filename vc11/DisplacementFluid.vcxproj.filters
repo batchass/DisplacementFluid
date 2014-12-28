@@ -16,24 +16,6 @@
     <Filter Include="Blocks">
       <UniqueIdentifier>{68344233-3249-439c-aa6f-61b2dc582368}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Blocks\MSAFluid">
-      <UniqueIdentifier>{c6947972-48e9-459d-b5bc-0d7bc423c27d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Blocks\OSC">
-      <UniqueIdentifier>{9DC3E89D-FD6D-43B0-B72C-1819246D3193}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Blocks\OSC\src">
-      <UniqueIdentifier>{E0912F9D-D4B8-46B2-B58B-5A3C2C688BE7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Blocks\OSC\src\ip">
-      <UniqueIdentifier>{8E7E338D-35D5-41B7-91AA-BEDD8FCAFBB4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Blocks\OSC\src\osc">
-      <UniqueIdentifier>{B6786622-AD46-4140-93DC-FC4ABE5ACA61}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Blocks\OSC\src\ip\win32">
-      <UniqueIdentifier>{3D1A6568-6023-4B43-82F3-F8338D4FD6F8}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\DisplacementFluidApp.cpp">
@@ -51,98 +33,11 @@
     <ClCompile Include="..\src\ParticleSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(CINDER_085)\blocks\msaFluid\src\ciMsaFluidSolver.cpp">
-      <Filter>Blocks\MSAFluid</Filter>
+    <ClCompile Include="..\..\..\blocks\msaFluid\src\ciMsaFluidDrawerGl.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(CINDER_085)\blocks\msaFluid\src\ciMsaFluidDrawerGl.cpp">
-      <Filter>Blocks\MSAFluid</Filter>
-    </ClCompile>
-    <ClCompile Include="$(CINDER_085)\blocks\OSC\src\OscBundle.cpp">
-      <Filter>Blocks\OSC\src</Filter>
-    </ClCompile>
-    <ClCompile Include="$(CINDER_085)\blocks\OSC\src\OscListener.cpp">
-      <Filter>Blocks\OSC\src</Filter>
-    </ClCompile>
-    <ClCompile Include="$(CINDER_085)\blocks\OSC\src\OscMessage.cpp">
-      <Filter>Blocks\OSC\src</Filter>
-    </ClCompile>
-    <ClCompile Include="$(CINDER_085)\blocks\OSC\src\OscSender.cpp">
-      <Filter>Blocks\OSC\src</Filter>
-    </ClCompile>
-    <ClCompile Include="$(CINDER_085)\blocks\OSC\src\ip\IpEndpointName.cpp">
-      <Filter>Blocks\OSC\src\ip</Filter>
-    </ClCompile>
-    <ClCompile Include="$(CINDER_085)\blocks\OSC\src\osc\OscOutboundPacketStream.cpp">
-      <Filter>Blocks\OSC\src\osc</Filter>
-    </ClCompile>
-    <ClCompile Include="$(CINDER_085)\blocks\OSC\src\osc\OscPrintReceivedElements.cpp">
-      <Filter>Blocks\OSC\src\osc</Filter>
-    </ClCompile>
-    <ClCompile Include="$(CINDER_085)\blocks\OSC\src\osc\OscReceivedElements.cpp">
-      <Filter>Blocks\OSC\src\osc</Filter>
-    </ClCompile>
-    <ClCompile Include="$(CINDER_085)\blocks\OSC\src\osc\OscTypes.cpp">
-      <Filter>Blocks\OSC\src\osc</Filter>
-    </ClCompile>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\OscArg.h">
-      <Filter>Blocks\OSC\src</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\OscBundle.h">
-      <Filter>Blocks\OSC\src</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\OscListener.h">
-      <Filter>Blocks\OSC\src</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\OscMessage.h">
-      <Filter>Blocks\OSC\src</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\OscSender.h">
-      <Filter>Blocks\OSC\src</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\ip\IpEndpointName.h">
-      <Filter>Blocks\OSC\src\ip</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\ip\NetworkingUtils.h">
-      <Filter>Blocks\OSC\src\ip</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\ip\PacketListener.h">
-      <Filter>Blocks\OSC\src\ip</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\ip\TimerListener.h">
-      <Filter>Blocks\OSC\src\ip</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\ip\UdpSocket.h">
-      <Filter>Blocks\OSC\src\ip</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\osc\MessageMappingOscPacketListener.h">
-      <Filter>Blocks\OSC\src\osc</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\osc\OscException.h">
-      <Filter>Blocks\OSC\src\osc</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\osc\OscHostEndianness.h">
-      <Filter>Blocks\OSC\src\osc</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\osc\OscOutboundPacketStream.h">
-      <Filter>Blocks\OSC\src\osc</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\osc\OscPacketListener.h">
-      <Filter>Blocks\OSC\src\osc</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\osc\OscPrintReceivedElements.h">
-      <Filter>Blocks\OSC\src\osc</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\osc\OscReceivedElements.h">
-      <Filter>Blocks\OSC\src\osc</Filter>
-    </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\OSC\src\osc\OscTypes.h">
-      <Filter>Blocks\OSC\src\osc</Filter>
-    </ClInclude>
-    <ClCompile Include="$(CINDER_085)\blocks\OSC\src\ip\win32\NetworkingUtils.cpp">
-      <Filter>Blocks\OSC\src\ip\win32</Filter>
-    </ClCompile>
-    <ClCompile Include="$(CINDER_085)\blocks\OSC\src\ip\win32\UdpSocket.cpp">
-      <Filter>Blocks\OSC\src\ip\win32</Filter>
+    <ClCompile Include="..\..\..\blocks\msaFluid\src\ciMsaFluidSolver.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -158,17 +53,17 @@
     <ClInclude Include="..\include\ParticleSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\msaFluid\include\ciMsaFluidDrawerGl.h">
-      <Filter>Blocks\MSAFluid</Filter>
+    <ClInclude Include="..\..\..\blocks\msaFluid\include\ciMsaFluid.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\msaFluid\include\ciMsaFluid.h">
-      <Filter>Blocks\MSAFluid</Filter>
+    <ClInclude Include="..\..\..\blocks\msaFluid\include\ciMsaFluidDrawerGl.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\msaFluid\include\ciMsaFluidSolver.h">
-      <Filter>Blocks\MSAFluid</Filter>
+    <ClInclude Include="..\..\..\blocks\msaFluid\include\ciMsaFluidParticleUpdater.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(CINDER_085)\blocks\msaFluid\include\ciMsaFluidParticleUpdater.h">
-      <Filter>Blocks\MSAFluid</Filter>
+    <ClInclude Include="..\..\..\blocks\msaFluid\include\ciMsaFluidSolver.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

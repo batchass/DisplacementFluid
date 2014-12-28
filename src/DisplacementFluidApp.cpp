@@ -2,17 +2,17 @@
 
 void msaFluidParticlesApp::reymentaSetup()
 {
-	mBackgroundColor = ColorAf( 0.0f, 0.0f, 0.0f, 0.0f );
+	mBackgroundColor = ColorAf( 0.0f, 0.0f, 0.0f, 1.0f );
 	mDisplayCount = 0;
 	mRenderY = 0;
 	for (auto display : Display::getDisplays() )
 	{
+		if (mDisplayCount == 0) mMainDisplayWidth = display->getWidth(); 
 		mDisplayCount++;
 		std::cout << "Width:" << display->getWidth() << "\n"; 
 		std::cout << "Height:" << display->getHeight() << "\n"; 
 		mRenderWidth = display->getWidth();
 		mRenderHeight = display->getHeight();
-
 		//mRenderX mRenderY mRenderWidth mRenderHeight
 	}
 	std::cout << "Display Count:" << mDisplayCount << "\n";
@@ -30,10 +30,10 @@ void msaFluidParticlesApp::reymentaSetup()
 
 	WindowRef rWin = app::getWindow();
 	rWin->setPos(mRenderX, mRenderY);
-	rWin->setBorderless();
-	rWin->setAlwaysOnTop();
+	//rWin->setBorderless();
+	//rWin->setAlwaysOnTop();
 
-	HWND hWnd = (HWND)rWin->getNative();
+	/*HWND hWnd = (HWND)rWin->getNative();
 
 	HRESULT hr = S_OK;
 	// Create and populate the Blur Behind structure
@@ -55,11 +55,10 @@ void msaFluidParticlesApp::reymentaSetup()
 
 		// Extend the frame on the bottom of the client area.
 		hr = DwmExtendFrameIntoClientArea(hWnd,&margins);
-	}
+	}*/
 
 	setWindowPos( mMainDisplayWidth, 0 );
-	//setFullScreen( ! isFullScreen() );
-	receiver.setup( 10000 );
+
 }
 void msaFluidParticlesApp::quitProgram()
 {
@@ -104,7 +103,7 @@ void msaFluidParticlesApp::setup()
 
 void msaFluidParticlesApp::update()
 {
-	while( receiver.hasWaitingMessages() ) {
+/*	while( receiver.hasWaitingMessages() ) {
 		osc::Message m;
 		receiver.getNextMessage( &m );
 
@@ -177,7 +176,7 @@ void msaFluidParticlesApp::update()
 
 		}
 
-	}
+	}*/
 
 	if( resizeFluid ) {
 		fluidSolver.setSize(fluidCellsX, fluidCellsX / getWindowAspectRatio() );
