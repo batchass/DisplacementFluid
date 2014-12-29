@@ -50,7 +50,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\include;..\..\..\\include;..\..\..\\boost;..\..\..\blocks\OSC\src;..\..\..\\blocks\msaFluid\src;..\..\..\blocks\msaFluid\include;..\..\..\blocks\Cinder-MIDI2\include;..\..\..\blocks\Cinder-MIDI2\lib;..\..\..\blocks\Cinder-MIDI2\src;..\..\..\blocks\Cinder-Spout\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\..\..\\include;..\..\..\\boost;..\..\..\blocks\OSC\src;..\..\..\\blocks\msaFluid\src;..\..\..\blocks\msaFluid\include;..\..\..\blocks\Cinder-MIDI2\include;..\..\..\blocks\Cinder-MIDI2\lib;..\..\..\blocks\Cinder-MIDI2\src;..\..\..\blocks\Cinder-Spout\include;..\..\..\blocks\Cinder-Reymenta\include;..\..\..\blocks\Cinder-Reymenta\src</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -79,7 +79,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\include;..\..\..\\include;..\..\..\\boost;..\..\..\blocks\OSC\src;..\..\..\\blocks\msaFluid\src;..\..\..\blocks\msaFluid\include;..\..\..\blocks\Cinder-MIDI2\include;..\..\..\blocks\Cinder-MIDI2\lib;..\..\..\blocks\Cinder-MIDI2\src;..\..\..\blocks\Cinder-Spout\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\..\..\\include;..\..\..\\boost;..\..\..\blocks\OSC\src;..\..\..\\blocks\msaFluid\src;..\..\..\blocks\msaFluid\include;..\..\..\blocks\Cinder-MIDI2\include;..\..\..\blocks\Cinder-MIDI2\lib;..\..\..\blocks\Cinder-MIDI2\src;..\..\..\blocks\Cinder-Spout\include;..\..\..\blocks\Cinder-Reymenta\include;..\..\..\blocks\Cinder-Reymenta\src</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader />
@@ -113,7 +113,6 @@
     <ResourceCompile Include="Resources.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\OSCWrapper.cpp" />
     <ClCompile Include="..\..\..\blocks\Cinder-MIDI2\src\MidiHub.cpp" />
     <ClCompile Include="..\..\..\blocks\Cinder-MIDI2\src\MidiIn.cpp" />
     <ClCompile Include="..\..\..\blocks\Cinder-MIDI2\src\MidiMessage.cpp" />
@@ -132,14 +131,18 @@
     <ClCompile Include="..\..\..\blocks\OSC\src\ip\win32\UdpSocket.cpp" />
     <ClCompile Include="..\..\..\blocks\msaFluid\src\ciMsaFluidDrawerGl.cpp" />
     <ClCompile Include="..\..\..\blocks\msaFluid\src\ciMsaFluidSolver.cpp" />
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\ParameterBag.cpp" />
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Shaders.cpp" />
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\OSCWrapper.cpp" />
     <ClCompile Include="..\src\DisplacementFluidApp.cpp" />
-    <ClCompile Include="..\src\ParameterBag.cpp" />
     <ClCompile Include="..\src\Particle.cpp" />
     <ClCompile Include="..\src\ParticleSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\OSCWrapper.h" />
-    <ClInclude Include="..\..\..\blocks\Spout\include\Spout.h" />
+    <ClInclude Include="..\..\..\blocks\Cinder-Spout\include\Spout.h" />
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\ParameterBag.h" />
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Shaders.h" />
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\OSCWrapper.h" />
     <ClInclude Include="..\..\..\blocks\Cinder-MIDI2\include\MidiConstants.h" />
     <ClInclude Include="..\..\..\blocks\Cinder-MIDI2\include\MidiExceptions.h" />
     <ClInclude Include="..\..\..\blocks\Cinder-MIDI2\include\MidiHeaders.h" />
@@ -172,7 +175,6 @@
     <ClInclude Include="..\..\..\blocks\msaFluid\include\ciMsaFluidParticleUpdater.h" />
     <ClInclude Include="..\..\..\blocks\msaFluid\include\ciMsaFluidSolver.h" />
     <ClInclude Include="..\include\DisplacementFluidApp.h" />
-    <ClInclude Include="..\include\ParameterBag.h" />
     <ClInclude Include="..\include\Particle.h" />
     <ClInclude Include="..\include\ParticleSystem.h" />
     <ClInclude Include="..\include\Resources.h" />

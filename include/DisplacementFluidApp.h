@@ -46,10 +46,15 @@
 #include "Resources.h"
 // hwnd
 #include "dwmapi.h"
-
+// parameters
+#include "ParameterBag.h"
+// OSC
+#include "OSCWrapper.h"
 
 using namespace ci;
 using namespace ci::app;
+using namespace std;
+using namespace Reymenta;
 
 class msaFluidParticlesApp : public AppBasic {
  public:
@@ -109,5 +114,9 @@ class msaFluidParticlesApp : public AppBasic {
 	int					mRenderHeight;
 	Vec2i				mMousePos;
 	bool				mMouseDown;
+	// parameters
+	ParameterBagRef				mParameterBag;
+	// osc
+	OSCRef						mOSC;
 
 };

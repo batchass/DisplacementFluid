@@ -67,6 +67,11 @@ void msaFluidParticlesApp::quitProgram()
 void msaFluidParticlesApp::setup()
 {
 	//console() << "ciMSAFluid Demo | (c) 2009 Mehmet Akten | www.memo.tv" << std::endl;
+	// parameters
+	mParameterBag = ParameterBag::create();
+	// instanciate the OSC class
+	mOSC = OSC::create(mParameterBag);
+
 	reymentaSetup();
 	// setup fluid stuff
 	fluidSolver.setup(100, 100);
@@ -103,80 +108,7 @@ void msaFluidParticlesApp::setup()
 
 void msaFluidParticlesApp::update()
 {
-/*	while( receiver.hasWaitingMessages() ) {
-		osc::Message m;
-		receiver.getNextMessage( &m );
-
-		console() << "New message received" << std::endl;
-		console() << "Address: " << m.getAddress() << std::endl;
-		console() << "Num Arg: " << m.getNumArgs() << std::endl;
-		// check for mouse moved message
-		if(m.getAddress() == "/mouse/position"){
-			// both the arguments are int32's
-			Vec2i pos = Vec2i( m.getArgAsInt32(0), m.getArgAsInt32(1));
-			Vec2f mouseNorm = Vec2f( pos ) / getWindowSize();
-			Vec2f mouseVel = Vec2f( pos - pMouse ) / getWindowSize();
-			addToFluid( mouseNorm, mouseVel, true, true );
-			pMouse = pos;
-			if ( m.getArgAsInt32(2) == 1 )
-			{
-				mMouseDown = true;
-			}
-			else
-			{
-				mMouseDown = false;
-			}
-			if ( mMouseDown )
-			{
-				mArcball.mouseDown( pos );
-				mCurrentMouseDown = mInitialMouseDown = pos;
-			}
-		}
-		// check for mouse button message
-		else if(m.getAddress() == "/mouse/button"){
-			// the single argument is a string
-			Vec2i pos = Vec2i( m.getArgAsInt32(0), m.getArgAsInt32(1));
-			mArcball.mouseDown( pos );
-			mCurrentMouseDown = mInitialMouseDown = pos;
-			if ( m.getArgAsInt32(2) == 1 )
-			{
-				mMouseDown = true;
-			}
-			else
-			{
-				mMouseDown = false;
-			}
-		}
-		else if(m.getAddress() == "/fluid/drawfluid"){
-			drawFluid = !drawFluid;
-		}
-		else if(m.getAddress() == "/fluid/drawfluidtex"){
-			drawFluidTex = !drawFluidTex;
-		}
-		else if(m.getAddress() == "/fluid/drawparticles"){
-			drawParticles = ! drawParticles;
-		}
-		else if(m.getAddress() == "/fluid/randomizecolor"){
-			fluidSolver.randomizeColor();
-		}
-		else if(m.getAddress() == "/window/position"){
-			// window position
-			setWindowPos(m.getArgAsInt32(0), m.getArgAsInt32(1));
-		}
-		else if(m.getAddress() == "/window/setfullscreen"){
-			// fullscreen
-			//setFullScreen( ! isFullScreen() );
-		}		
-		else if(m.getAddress() == "/quit"){
-			quitProgram();
-		}		
-		else{
-			// unrecognized message
-			//cout << "not recognized:" << m.getAddress() << endl;
-
-		}
-
-	}*/
+	mOSC->update();
 
 	if( resizeFluid ) {
 		fluidSolver.setSize(fluidCellsX, fluidCellsX / getWindowAspectRatio() );

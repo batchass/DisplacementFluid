@@ -43,11 +43,20 @@
     <Filter Include="Blocks\OSC\src\ip\win32">
       <UniqueIdentifier>{13A0409C-7FC1-40BB-9075-40FEAEDA843D}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Blocks\Spout">
+    <Filter Include="Blocks\Cinder-Spout">
       <UniqueIdentifier>{0bf9720a-f78a-431d-8c83-bdacae1ace36}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Blocks\Spout\include">
+    <Filter Include="Blocks\Cinder-Spout\include">
       <UniqueIdentifier>{1c316b70-df14-4369-965c-d9a2a645fd03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\Cinder-Reymenta">
+      <UniqueIdentifier>{0bf9720a-f78a-431d-8c83-bdacae1ace37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\Cinder-Reymenta\include">
+      <UniqueIdentifier>{1c316b70-df14-4369-965c-d9a2a645fd08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\Cinder-Reymenta\src">
+      <UniqueIdentifier>{1c316b70-df14-4369-965c-d9a2a645fd09}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -201,19 +210,31 @@
     <ClCompile Include="..\..\..\blocks\OSC\src\ip\win32\UdpSocket.cpp">
       <Filter>Blocks\OSC\src\ip\win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\OSCWrapper.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ParameterBag.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
+      <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\src\ParameterBag.cpp">
+      <Filter>Blocks\Cinder-Reymenta\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\src\Shaders.cpp">
+      <Filter>Blocks\Cinder-Reymenta\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\src\OSCWrapper.cpp">
+      <Filter>Blocks\Cinder-Reymenta\src</Filter>
+    </ClInclude>
+</ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\blocks\Spout\include\Spout.h">
-      <Filter>Blocks\Spout\include</Filter>
+    <ClInclude Include="..\..\..\blocks\Cinder-Spout\include\Spout.h">
+      <Filter>Blocks\Cinder-Spout\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\ParameterBag.h">
+      <Filter>Blocks\Cinder-Reymenta\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Shaders.h">
+      <Filter>Blocks\Cinder-Reymenta\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\OSCWrapper.h">
+      <Filter>Blocks\Cinder-Reymenta\include</Filter>
     </ClInclude>
     <ClInclude Include="..\include\DisplacementFluidApp.h">
       <Filter>Header Files</Filter>
@@ -235,12 +256,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\blocks\msaFluid\include\ciMsaFluidSolver.h">
       <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\OSCWrapper.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\ParameterBag.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
