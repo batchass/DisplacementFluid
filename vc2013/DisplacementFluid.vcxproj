@@ -118,6 +118,13 @@
     <ClCompile Include="..\..\..\blocks\Cinder-MIDI2\src\MidiMessage.cpp" />
     <ClCompile Include="..\..\..\blocks\Cinder-MIDI2\src\MidiOut.cpp" />
     <ClCompile Include="..\..\..\blocks\Cinder-MIDI2\lib\RtMidi.cpp" />
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\AudioWrapper.cpp" />
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Logger.cpp" />
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\OSCWrapper.cpp" />
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\ParameterBag.cpp" />
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Reymenta.cpp" />
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Shaders.cpp" />
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Textures.cpp" />
     <ClCompile Include="..\..\..\blocks\OSC\src\OscBundle.cpp" />
     <ClCompile Include="..\..\..\blocks\OSC\src\OscListener.cpp" />
     <ClCompile Include="..\..\..\blocks\OSC\src\OscMessage.cpp" />
@@ -131,14 +138,16 @@
     <ClCompile Include="..\..\..\blocks\OSC\src\ip\win32\UdpSocket.cpp" />
     <ClCompile Include="..\..\..\blocks\msaFluid\src\ciMsaFluidDrawerGl.cpp" />
     <ClCompile Include="..\..\..\blocks\msaFluid\src\ciMsaFluidSolver.cpp" />
-    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\ParameterBag.cpp" />
-    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Shaders.cpp" />
-    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\OSCWrapper.cpp" />
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\AudioWrapper.h" />
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Logger.h" />
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Reymenta.h" />
     <ClCompile Include="..\src\DisplacementFluidApp.cpp" />
     <ClCompile Include="..\src\Particle.cpp" />
     <ClCompile Include="..\src\ParticleSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Textures.h" />
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Watchdog.h" />
     <ClInclude Include="..\..\..\blocks\Cinder-Spout\include\Spout.h" />
     <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\ParameterBag.h" />
     <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Shaders.h" />

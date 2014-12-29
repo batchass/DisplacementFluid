@@ -210,16 +210,28 @@
     <ClCompile Include="..\..\..\blocks\OSC\src\ip\win32\UdpSocket.cpp">
       <Filter>Blocks\OSC\src\ip\win32</Filter>
     </ClCompile>
-      <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\src\ParameterBag.cpp">
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\AudioWrapper.cpp">
       <Filter>Blocks\Cinder-Reymenta\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\src\Shaders.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Logger.cpp">
       <Filter>Blocks\Cinder-Reymenta\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\src\OSCWrapper.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\OSCWrapper.cpp">
       <Filter>Blocks\Cinder-Reymenta\src</Filter>
-    </ClInclude>
-</ItemGroup>
+    </ClCompile>
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\ParameterBag.cpp">
+      <Filter>Blocks\Cinder-Reymenta\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Reymenta.cpp">
+      <Filter>Blocks\Cinder-Reymenta\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Shaders.cpp">
+      <Filter>Blocks\Cinder-Reymenta\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Textures.cpp">
+      <Filter>Blocks\Cinder-Reymenta\src</Filter>
+    </ClCompile>
+  </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
       <Filter>Header Files</Filter>
@@ -256,6 +268,21 @@
     </ClInclude>
     <ClInclude Include="..\..\..\blocks\msaFluid\include\ciMsaFluidSolver.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\AudioWrapper.h">
+      <Filter>Blocks\Cinder-Reymenta\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Logger.h">
+      <Filter>Blocks\Cinder-Reymenta\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Reymenta.h">
+      <Filter>Blocks\Cinder-Reymenta\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Textures.h">
+      <Filter>Blocks\Cinder-Reymenta\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Watchdog.h">
+      <Filter>Blocks\Cinder-Reymenta\include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
