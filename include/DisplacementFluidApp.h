@@ -48,6 +48,10 @@
 #include "dwmapi.h"
 // parameters
 #include "ParameterBag.h"
+// Textures
+#include "Textures.h"
+// Shaders
+#include "Shaders.h"
 // OSC
 #include "OSCWrapper.h"
 
@@ -100,7 +104,7 @@ class msaFluidParticlesApp : public AppBasic {
 	float				height;
 
 	bool				drawFluidTex;
-
+private:
 	// Reymenta
 	void				reymentaSetup();
 	void				quitProgram();
@@ -116,6 +120,10 @@ class msaFluidParticlesApp : public AppBasic {
 	bool				mMouseDown;
 	// parameters
 	ParameterBagRef				mParameterBag;
+	// textures
+	TexturesRef					mTextures;
+	// shaders
+	ShadersRef					mShaders;
 	// osc
 	OSCRef						mOSC;
 

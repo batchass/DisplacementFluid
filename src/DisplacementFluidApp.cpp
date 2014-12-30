@@ -70,7 +70,11 @@ void msaFluidParticlesApp::setup()
 	// parameters
 	mParameterBag = ParameterBag::create();
 	// instanciate the OSC class
-	mOSC = OSC::create(mParameterBag);
+	mShaders = Shaders::create(mParameterBag);
+	// instanciate the Textures class
+	mTextures = Textures::create(mParameterBag, mShaders);
+	// instanciate the OSC class
+	mOSC = OSC::create(mParameterBag, mShaders);
 
 	reymentaSetup();
 	// setup fluid stuff

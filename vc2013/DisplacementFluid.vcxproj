@@ -40,10 +40,10 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\reymenta\program\data\displacementfluiddebug</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\reymenta\program\data\displacementfluid</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
   </PropertyGroup>
@@ -119,10 +119,10 @@
     <ClCompile Include="..\..\..\blocks\Cinder-MIDI2\src\MidiOut.cpp" />
     <ClCompile Include="..\..\..\blocks\Cinder-MIDI2\lib\RtMidi.cpp" />
     <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\AudioWrapper.cpp" />
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Batchass.cpp" />
     <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Logger.cpp" />
     <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\OSCWrapper.cpp" />
     <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\ParameterBag.cpp" />
-    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Reymenta.cpp" />
     <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Shaders.cpp" />
     <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Textures.cpp" />
     <ClCompile Include="..\..\..\blocks\OSC\src\OscBundle.cpp" />
@@ -139,8 +139,8 @@
     <ClCompile Include="..\..\..\blocks\msaFluid\src\ciMsaFluidDrawerGl.cpp" />
     <ClCompile Include="..\..\..\blocks\msaFluid\src\ciMsaFluidSolver.cpp" />
     <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\AudioWrapper.h" />
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Batchass.h" />
     <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Logger.h" />
-    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Reymenta.h" />
     <ClCompile Include="..\src\DisplacementFluidApp.cpp" />
     <ClCompile Include="..\src\Particle.cpp" />
     <ClCompile Include="..\src\ParticleSystem.cpp" />

@@ -222,13 +222,13 @@
     <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\ParameterBag.cpp">
       <Filter>Blocks\Cinder-Reymenta\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Reymenta.cpp">
-      <Filter>Blocks\Cinder-Reymenta\src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Shaders.cpp">
       <Filter>Blocks\Cinder-Reymenta\src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Textures.cpp">
+      <Filter>Blocks\Cinder-Reymenta\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\blocks\Cinder-Reymenta\src\Batchass.cpp">
       <Filter>Blocks\Cinder-Reymenta\src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -275,13 +275,13 @@
     <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Logger.h">
       <Filter>Blocks\Cinder-Reymenta\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Reymenta.h">
-      <Filter>Blocks\Cinder-Reymenta\include</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Textures.h">
       <Filter>Blocks\Cinder-Reymenta\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Watchdog.h">
+      <Filter>Blocks\Cinder-Reymenta\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blocks\Cinder-Reymenta\include\Batchass.h">
       <Filter>Blocks\Cinder-Reymenta\include</Filter>
     </ClInclude>
   </ItemGroup>
