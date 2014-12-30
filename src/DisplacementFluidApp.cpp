@@ -108,6 +108,8 @@ void msaFluidParticlesApp::setup()
 	drawFluidTex = false;
 
 	loadShader();
+	mCursorVisible = false;
+	hideCursor();
 }
 
 void msaFluidParticlesApp::update()
@@ -210,7 +212,17 @@ void msaFluidParticlesApp::keyDown( KeyEvent event )
 		console() << ITERS << " iterations took " << timer.getSeconds() << " seconds." << std::endl;
 			  }
 			  break;
-	case 's':
+	case 'c':
+		if (mCursorVisible)
+		{
+			hideCursor();
+		}
+		else
+		{
+			showCursor();
+		}
+		mCursorVisible = !mCursorVisible;
+		break;	case 's':
 		writeImage( getHomeDirectory() / "cinder" / "saveImage_" / ( toString( getElapsedFrames() ) + ".png" ), copyWindowSurface() );
 		break;
 	}

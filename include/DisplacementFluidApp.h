@@ -105,6 +105,7 @@ class msaFluidParticlesApp : public AppBasic {
 
 	bool				drawFluidTex;
 private:
+	bool				mCursorVisible;
 	// Reymenta
 	void				reymentaSetup();
 	void				quitProgram();
